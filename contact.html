@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ways</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="m-0">
+    <!-- Wrapper -->
+    <div class="md:grid grid-cols-6">
+        <nav class=" md:col-span-1 pr-3 bg-blue-100 row-span-3">
+            <div class="flex justify-between items-center border-b-2 border-b-white ml-1">
+                <h1 class="text-4xl font-title p-4 font-extrabold text-[#CC7212] uppercase">Food Ways</h1>
+                <svg id="menu-trigger" class="w-6 h-6 md:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </div>
+            <ul class="mt-2 hidden md:block" id="menu">
+                <li class="border-r-2 mb-1 p-1 ">
+                    <a href="index.html" class="flex justify-end w-full ">
+                        <span>Home</span>
+                        <svg class="w-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    </a>
+                </li>
+                <li class="flex border-r-2 mb-1 p-1 ">
+                    <a href="about.html" class="flex justify-end w-full">
+                        <span>About</span>
+                        <svg class="w-5 ml-2 " fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </a>
+                </li>
+                <li class="flex border-r-2 mb-1 p-1 border-pink-500">
+                    <a href="#" class="flex justify-end w-full font-bold">
+                        <span>Contact</span>
+                        <svg class="w-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main class="main row-span-2 min-h-screen">
+            <div class="border-2 border-blue-100 h-full w-full">
+                <h1 class="headtitle">Contact us</h1>
+                <div class="psection">
+                    <div class="text-center col-span-2 mb-3 text-[#684E50] flex items-center justify-center">
+                        <img class="h-10" src="img/chef-hat.svg" alt="">
+                        <span class=" font-bold text-3xl  capitalize ml-3">For chefs</span>
+                    </div>
+                    
+                    <p class="col-span-2 mt-5 md:mt-0 font-bold text-center capitalize text-[#684E50]">
+                        chefs_admins@foodways.com
+                    </p>
+                </div>
+                <div class="psection">
+                    <span class="mb-3 font-bold text-3xl text-center col-span-2 capitalize text-[#684E50]">To share your recipes with us</span>
+                    <p class="col-span-2 mt-5 md:mt-0 font-bold text-center capitalize text-[#684E50]">
+                        recipes@foodways.com
+                    </p>
+                </div>
+                <div class="psection">
+                    <span class="mb-3 font-bold text-3xl text-center col-span-2 capitalize text-[#684E50]">for complains</span>
+                    <p class="col-span-2 mt-5 md:mt-0 font-bold text-center capitalize text-[#684E50]">
+                        complans_admins@foodways.com
+                    </p>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <span class="mx-5">&copy;2021, Mohamed</span>
+            <a class="mx-5" href="https://github.com/mohamedla" target="blank"><span></span>Contact Developer</span></a>
+        </footer>
+    </div>
+    <script>
+        const menu = document.getElementById('menu'),
+            menuTrigger = document.getElementById('menu-trigger');
+        
+        menuTrigger.addEventListener('click', ()=>{showHidden(menu);});
+
+        function showHidden(hiddenItem) {
+            if(hiddenItem.classList.contains('hidden')){
+                hiddenItem.classList.remove('hidden');
+            }else{
+                hiddenItem.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
